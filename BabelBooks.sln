@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36518.9 d17.14
+VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -13,7 +13,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{5E024BE8-340C-4A8E-818D-BEEBAE4AB707}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabelBooks.Core.Domain", "BabelBooks.Core.Domain\BabelBooks.Core.Domain.csproj", "{A3154D42-1D3E-490A-99F0-942D89905B3F}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3154D42-1D3E-490A-99F0-942D89905B3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3154D42-1D3E-490A-99F0-942D89905B3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3154D42-1D3E-490A-99F0-942D89905B3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3154D42-1D3E-490A-99F0-942D89905B3F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
@@ -22,6 +34,7 @@ Global
 		{FB714CEB-82E9-4E5B-B236-069EBDAB72C5} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{4FF4F9D7-E83A-433C-A19D-6942B3651ADF} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{5E024BE8-340C-4A8E-818D-BEEBAE4AB707} = {4FF4F9D7-E83A-433C-A19D-6942B3651ADF}
+		{A3154D42-1D3E-490A-99F0-942D89905B3F} = {2AF40BBD-E8BA-4581-9658-37BC27E48EB2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {795C2C93-746D-4E00-B303-0EB05BC318E2}
