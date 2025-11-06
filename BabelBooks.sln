@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabelBooksAPI", "BabelBooks
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabelBooks.Core.Application", "BabelBooks.Core.Application\BabelBooks.Core.Application.csproj", "{128A6CBD-CE51-42A0-97B5-8F0FB6C4AFFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabelBooks.Infrastructure.Persistence", "BabelBooks.Infrastructure.Persistence\BabelBooks.Infrastructure.Persistence.csproj", "{EFB1DE35-FEBB-4EC5-8D1D-CD5D13F3FDB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{128A6CBD-CE51-42A0-97B5-8F0FB6C4AFFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{128A6CBD-CE51-42A0-97B5-8F0FB6C4AFFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{128A6CBD-CE51-42A0-97B5-8F0FB6C4AFFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFB1DE35-FEBB-4EC5-8D1D-CD5D13F3FDB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFB1DE35-FEBB-4EC5-8D1D-CD5D13F3FDB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFB1DE35-FEBB-4EC5-8D1D-CD5D13F3FDB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFB1DE35-FEBB-4EC5-8D1D-CD5D13F3FDB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +55,7 @@ Global
 		{A3154D42-1D3E-490A-99F0-942D89905B3F} = {2AF40BBD-E8BA-4581-9658-37BC27E48EB2}
 		{AFF29E0E-D07F-4485-92F6-AC149B1C867B} = {5E024BE8-340C-4A8E-818D-BEEBAE4AB707}
 		{128A6CBD-CE51-42A0-97B5-8F0FB6C4AFFC} = {2AF40BBD-E8BA-4581-9658-37BC27E48EB2}
+		{EFB1DE35-FEBB-4EC5-8D1D-CD5D13F3FDB6} = {FB714CEB-82E9-4E5B-B236-069EBDAB72C5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {795C2C93-746D-4E00-B303-0EB05BC318E2}
