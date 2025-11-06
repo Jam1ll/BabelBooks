@@ -9,9 +9,7 @@ namespace BabelBooks.Core.Application.Features.ProductsCQRS.Commands.UpdatePrice
         private readonly IDocumentSession _documentSession;
 
         public UpdateProductCommandHandler(IDocumentSession documentSession)
-        {
-            _documentSession = documentSession;
-        }
+            => _documentSession = documentSession;
 
         public async Task Handle(UpdateProductCommand request, CancellationToken cancellationToken)
         {

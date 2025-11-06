@@ -9,10 +9,8 @@ namespace BabelBooks.Core.Application.Features.ProductsCQRS.Commands.Create
         //IDocumentSession de Marten para interactuar con los agregados/eventos en la base de datos
         private readonly IDocumentSession _documentSession;
 
-        public CreateProductCommandHandler(IDocumentSession documentSession)
-        {
-            _documentSession = documentSession;
-        }
+        public CreateProductCommandHandler(IDocumentSession documentSession) 
+            => _documentSession = documentSession;
 
         //implementando interfaz de IRequestHandler para manejar el comando CreateProductCommand
         public async Task<Guid> Handle(CreateProductCommand request, CancellationToken cancellationToken)

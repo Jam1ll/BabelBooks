@@ -1,4 +1,10 @@
 
+using BabelBooks.Core.Application;
+using BabelBooks.Infrastructure.Persistence;
+using BabelBooks.Core.Application.Features.ProductsCQRS.Commands; // (O BabelBooks.Core.Application.Comandos)
+using BabelBooks.Core.Application.Features.ProductsCQRS.Commands.Create;
+using Microsoft.AspNetCore.Mvc;
+
 namespace BabelBooksAPI
 {
     public class Program
@@ -7,26 +13,38 @@ namespace BabelBooksAPI
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            //
+            //agregar servicios al contenedor (inyeccion de dependencias)
+            //
 
-            builder.Services.AddControllers();
-            // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-            builder.Services.AddOpenApi();
+            //servicios de API y Swagger
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
 
+            //servicios de otras capas
+            builder.Services.AddApplication();
+            builder.Services.AddInfrastructure(builder.Configuration);            
+
+            //construir la app
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            //
+            // configurar el pipeline HTTP
+            //
             if (app.Environment.IsDevelopment())
             {
-                app.MapOpenApi();
+                app.UseSwagger();
+                app.UseSwaggerUI();
             }
 
             app.UseHttpsRedirection();
 
-            app.UseAuthorization();
+            //
+            // ENDPOINTS de la API
+            //
 
+           
 
-            app.MapControllers();
 
             app.Run();
         }
