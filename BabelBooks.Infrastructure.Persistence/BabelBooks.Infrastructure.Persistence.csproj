@@ -7,7 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Projections\" />
+    <Compile Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder\**" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Marten" Version="8.14.0" />
+	</ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BabelBooks.Core.Application\BabelBooks.Core.Application.csproj" />
   </ItemGroup>
 
 </Project>
