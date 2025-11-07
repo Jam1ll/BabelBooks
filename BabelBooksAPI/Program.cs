@@ -1,9 +1,5 @@
-
 using BabelBooks.Core.Application;
 using BabelBooks.Infrastructure.Persistence;
-using BabelBooks.Core.Application.Features.ProductsCQRS.Commands; // (O BabelBooks.Core.Application.Comandos)
-using BabelBooks.Core.Application.Features.ProductsCQRS.Commands.Create;
-using Microsoft.AspNetCore.Mvc;
 
 namespace BabelBooksAPI
 {
@@ -21,9 +17,12 @@ namespace BabelBooksAPI
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            //servicio de API Controllers (no se usara Minimal API)
+            builder.Services.AddControllers();
+
             //servicios de otras capas
             builder.Services.AddApplication();
-            builder.Services.AddInfrastructure(builder.Configuration);            
+            builder.Services.AddInfrastructure(builder.Configuration);
 
             //construir la app
             var app = builder.Build();
@@ -31,6 +30,7 @@ namespace BabelBooksAPI
             //
             // configurar el pipeline HTTP
             //
+
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -38,14 +38,8 @@ namespace BabelBooksAPI
             }
 
             app.UseHttpsRedirection();
-
-            //
-            // ENDPOINTS de la API
-            //
-
-           
-
-
+            app.UseAuthorization();
+            app.MapControllers();
             app.Run();
         }
     }
